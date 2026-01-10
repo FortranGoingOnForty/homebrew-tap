@@ -1,8 +1,8 @@
 class Firp < Formula
   desc "A Modern Fortran Interpreter with REPL, debugger, and JIT compilation"
   homepage "https://github.com/FortranGoingOnForty/firp"
-  url "https://github.com/FortranGoingOnForty/firp/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "29bdc248a2105f340c921fc0190cb06acb4be839205715f116664a3aec5b84b4"
+  url "https://github.com/FortranGoingOnForty/firp/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "2b024de7634cd7436a364eed2a820606f65d80edff6cec23ab9def724112d3b2"
   license "MIT"
   head "https://github.com/FortranGoingOnForty/firp.git", branch: "trunk"
 
