@@ -3,7 +3,7 @@ class Fortsh < Formula
   homepage "https://github.com/FortranGoingOnForty/fortsh"
   url "https://github.com/FortranGoingOnForty/fortsh/archive/refs/tags/v1.5.0.tar.gz"
   sha256 "e317822928b621b896ecf1bf9f12b493e8c83c7b618fe749232f420ea867ab14"
-  license "MIT"
+  license "GPL-3.0-only"
   head "https://github.com/FortranGoingOnForty/fortsh.git", branch: "trunk"
 
   depends_on "gcc" # for gfortran
