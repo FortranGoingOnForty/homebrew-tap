@@ -6,7 +6,21 @@ class Fortsh < Formula
   license "GPL-3.0-only"
   head "https://github.com/FortranGoingOnForty/fortsh.git", branch: "trunk"
 
-  depends_on "gcc" # for gfortran
+  # Compiler dependency varies by platform.
+  # macOS ARM64 requires flang-new (gfortran has critical bugs on Apple Silicon
+  # — see docs/MACOS_ARM64_WORKAROUNDS.md). Everything else uses gfortran.
+  on_macos do
+    on_arm do
+      depends_on "flang"
+    end
+    on_intel do
+      depends_on "gcc"
+    end
+  end
+  on_linux do
+    depends_on "gcc"
+  end
+
   depends_on "fzf" # for interactive keybinds
 
   def install
