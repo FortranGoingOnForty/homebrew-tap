@@ -78,12 +78,10 @@ class Ftop < Formula
     fgof_root = buildpath/"_fgof"
     fgof_root.mkpath
 
-    %w[
-      fgof-temp fgof-pty fgof-screen fgof-termios fgof-keys
-      fgof-lineedit fgof-fs fgof-process fgof-watch fgof-state
-      fgof-cache fgof-expect fgof-toml
-    ].each do |dep|
-      resource(dep).stage(fgof_root/dep)
+    resources.each do |r|
+      r.stage do
+        (fgof_root/r.name).install Pathname.pwd.children
+      end
     end
 
     system "cmake", "-S", ".", "-B", "build",
