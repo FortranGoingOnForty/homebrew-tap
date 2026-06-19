@@ -80,7 +80,9 @@ class Ftop < Formula
 
     resources.each do |r|
       r.stage do
-        (fgof_root/r.name).install Pathname.pwd.children
+        target = fgof_root/r.name
+        target.mkpath
+        cp_r Pathname.pwd.children, target
       end
     end
 
