@@ -10,63 +10,63 @@ class Ftop < Formula
   depends_on "gcc" # for gfortran
 
   resource "fgof-temp" do
-    url "https://github.com/FortranGoingOnForty/fgof-temp/archive/refs/tags/v0.1.0.tar.gz"
-    sha256 "d46446c1dfaac7aa19bb400404e6d127d94e3c04236bb2bcc6f69e1526e8f23a"
+    url "https://github.com/FortranGoingOnForty/fgof-temp/archive/refs/tags/v0.2.0.tar.gz"
+    sha256 "8c80a194dee6d798aeedcf6f3ab4e591fcb4a986256e43363ef2d81ebd4d39d7"
   end
 
   resource "fgof-pty" do
-    url "https://github.com/FortranGoingOnForty/fgof-pty/archive/refs/tags/v0.1.0.tar.gz"
-    sha256 "3f64569c3bffd18a21541643ac94953d27f1575a71faba1783b54881833cc28e"
+    url "https://github.com/FortranGoingOnForty/fgof-pty/archive/refs/tags/v0.2.0.tar.gz"
+    sha256 "a060dec59d03886deaf3551fcd06c0b196dfb0871a5781d3aeb866d419603f33"
   end
 
   resource "fgof-screen" do
-    url "https://github.com/FortranGoingOnForty/fgof-screen/archive/refs/tags/v0.1.0.tar.gz"
-    sha256 "b8deda84fa20276d46c178333ce09d0b66dab8f9a95dfdd041ed70787753772f"
+    url "https://github.com/FortranGoingOnForty/fgof-screen/archive/refs/tags/v0.2.0.tar.gz"
+    sha256 "c77d2722d69b9b175b914b6a8f2fcfc21fba3346f6f782ceb4bec2c8d7c4b0bd"
   end
 
   resource "fgof-termios" do
-    url "https://github.com/FortranGoingOnForty/fgof-termios/archive/refs/tags/v0.1.0.tar.gz"
-    sha256 "e0d320966362ef8401730de7ca015f9d4a17435d925a546168c36eb928b6263a"
+    url "https://github.com/FortranGoingOnForty/fgof-termios/archive/refs/tags/v0.2.0.tar.gz"
+    sha256 "c55eaa2779bcf1120256cd53965ad909c1608cb2c7ae2e21284a613f8771dc1d"
   end
 
   resource "fgof-keys" do
-    url "https://github.com/FortranGoingOnForty/fgof-keys/archive/refs/tags/v0.1.0.tar.gz"
-    sha256 "880c6c0e7ba960a843c34f7b6970ff50e336d6d59b9784c618867a4200f0ed9e"
+    url "https://github.com/FortranGoingOnForty/fgof-keys/archive/refs/tags/v0.2.0.tar.gz"
+    sha256 "3abe53ccb797e14f5a96efb25ac73903a61fa9a890d0f9f883ba94ff4e348a31"
   end
 
   resource "fgof-lineedit" do
-    url "https://github.com/FortranGoingOnForty/fgof-lineedit/archive/refs/tags/v0.1.0.tar.gz"
-    sha256 "45762edbe32ae58ba272b1b182b8a15e4eb691917ec383fc22759fded2bf3100"
+    url "https://github.com/FortranGoingOnForty/fgof-lineedit/archive/refs/tags/v0.2.0.tar.gz"
+    sha256 "e43093213d5180f07b1918a6d87e388c938169f2cba178db7eaf09be4dd96857"
   end
 
   resource "fgof-fs" do
-    url "https://github.com/FortranGoingOnForty/fgof-fs/archive/refs/tags/v0.1.0.tar.gz"
-    sha256 "80e2ab563c2a4915fbcd5632942195a88b4cfa0814f6db2bcb25b0acadedb668"
+    url "https://github.com/FortranGoingOnForty/fgof-fs/archive/refs/tags/v0.2.0.tar.gz"
+    sha256 "9755b7a3f4ed0ab1875cc02614d560383d6bd1112dcbbe31c2d2e760f511e693"
   end
 
   resource "fgof-process" do
-    url "https://github.com/FortranGoingOnForty/fgof-process/archive/refs/tags/v0.1.1.tar.gz"
-    sha256 "f0f1ae8075fa109350cf227aeeb5df90d7eef5ec6100827b74aae5dc0557c296"
+    url "https://github.com/FortranGoingOnForty/fgof-process/archive/refs/tags/v0.2.0.tar.gz"
+    sha256 "41d60051f33e4ade1d97d1acfeba579e50a7bb16626af97caaea5e053e97812f"
   end
 
   resource "fgof-watch" do
-    url "https://github.com/FortranGoingOnForty/fgof-watch/archive/refs/tags/v0.1.0.tar.gz"
-    sha256 "2d1ec7cd7bfe5ff3f73f957fa1a87c4e2832053f97526ff821e4df6adc7720b2"
+    url "https://github.com/FortranGoingOnForty/fgof-watch/archive/refs/tags/v0.2.0.tar.gz"
+    sha256 "dd19cf7cddfe3a9ab17a81222ff750f3f52cb93f0e6a71f44b4d8b4095e774c4"
   end
 
   resource "fgof-state" do
-    url "https://github.com/FortranGoingOnForty/fgof-state/archive/refs/tags/v0.1.0.tar.gz"
-    sha256 "eb3cf32ceb1682c208f67196e5b44088d1d72f8358f0f6a50eeb41b3cb3aa81e"
+    url "https://github.com/FortranGoingOnForty/fgof-state/archive/refs/tags/v0.2.0.tar.gz"
+    sha256 "fbfaf3b0f5d324ecb319612a8b09a366d50ab4aa4fd6d1b5d4b3a179f996ad2b"
   end
 
   resource "fgof-cache" do
-    url "https://github.com/FortranGoingOnForty/fgof-cache/archive/refs/tags/v0.1.0.tar.gz"
-    sha256 "41d92c1c89a04bc785f2a6397f583c7491976d76e56677634afefdf649c5458e"
+    url "https://github.com/FortranGoingOnForty/fgof-cache/archive/refs/tags/v0.2.0.tar.gz"
+    sha256 "20e637850f35f5b885e299b424fbbd7ebb248bffb9300f0b367433ac00a9252f"
   end
 
   resource "fgof-expect" do
-    url "https://github.com/FortranGoingOnForty/fgof-expect/archive/refs/tags/v0.1.0.tar.gz"
-    sha256 "059e5ac22c612cf76735c3c9d09c813f600a43b2abfd042d3bfe571197028cad"
+    url "https://github.com/FortranGoingOnForty/fgof-expect/archive/refs/tags/v0.2.0.tar.gz"
+    sha256 "6becdb60881a2099c91c5cc184f8d3ef6205916bcb92c4328e18be161930cd5b"
   end
 
   resource "fgof-toml" do
@@ -79,11 +79,7 @@ class Ftop < Formula
     fgof_root.mkpath
 
     resources.each do |r|
-      r.stage do
-        target = fgof_root/r.name
-        target.mkpath
-        cp_r Pathname.pwd.children, target
-      end
+      r.stage(fgof_root/r.name)
     end
 
     system "cmake", "-S", ".", "-B", "build",
