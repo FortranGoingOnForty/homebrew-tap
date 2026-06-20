@@ -90,7 +90,6 @@ class Ftop < Formula
     system "cmake", "--build", "build"
 
     bin.install "build/bin/ftop"
-    doc.install "README.md"
   end
 
   test do
