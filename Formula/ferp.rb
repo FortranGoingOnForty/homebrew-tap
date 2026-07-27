@@ -1,12 +1,14 @@
 class Ferp < Formula
   desc "A GNU grep clone written in Fortran"
   homepage "https://github.com/FortranGoingOnForty/ferp"
-  url "https://github.com/FortranGoingOnForty/ferp/archive/refs/tags/v0.9.1.tar.gz"
-  sha256 "22215a544137239defd1a419db88a7bc49bb3d8d2a8728619200992c7b4c5394"
+  url "https://github.com/FortranGoingOnForty/ferp/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "039821e46c045f328150cc5f4ad1f79f97a50aaf8007273a7f2030eb033c0653"
   head "https://github.com/FortranGoingOnForty/ferp.git", branch: "trunk"
 
+  # No llvm: the C sources build fine with the clang from the Command Line
+  # Tools, which Homebrew already requires. ferp's macOS CI builds with only
+  # gcc and pcre2 installed.
   depends_on "gcc" => :build
-  depends_on "llvm" => :build
   depends_on "pcre2"
 
   def install
@@ -21,5 +23,13 @@ class Ferp < Formula
 
   test do
     assert_match "hello", pipe_output("#{bin}/ferp hello", "hello world")
+    assert_match version.to_s, shell_output("#{bin}/ferp --version")
+
+    # Exercises the directory walk, which reads struct stat and struct dirent
+    # and so is the part most likely to break on macOS.
+    (testpath/"sub").mkpath
+    (testpath/"top.txt").write("needle\n")
+    (testpath/"sub/nested.txt").write("needle\n")
+    assert_equal 2, shell_output("#{bin}/ferp -r needle #{testpath}").lines.count
   end
 end
