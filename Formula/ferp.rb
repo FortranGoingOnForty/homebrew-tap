@@ -1,8 +1,8 @@
 class Ferp < Formula
   desc "A GNU grep clone written in Fortran"
   homepage "https://github.com/FortranGoingOnForty/ferp"
-  url "https://github.com/FortranGoingOnForty/ferp/archive/refs/tags/v0.10.0.tar.gz"
-  sha256 "039821e46c045f328150cc5f4ad1f79f97a50aaf8007273a7f2030eb033c0653"
+  url "https://github.com/FortranGoingOnForty/ferp/archive/refs/tags/v0.10.1.tar.gz"
+  sha256 "69dd4dbb31c234aab9f33f2731099d62eddba3a15343c03e7ecc2ee748e27d6f"
   head "https://github.com/FortranGoingOnForty/ferp.git", branch: "trunk"
 
   # No llvm: the C sources build fine with the clang from the Command Line
@@ -12,9 +12,10 @@ class Ferp < Formula
   depends_on "pcre2"
 
   def install
-    # Use -j1 to avoid race condition: release target runs clean, then parallel jobs
-    # start before build directory is recreated
-    system "make", "-j1", "release", "FC=gfortran"
+    # The -j1 workaround is no longer needed: the race it avoided (the release
+    # target ran clean as an unordered prerequisite, so rm -rf build could land
+    # mid-build) is fixed in 0.10.1, and ferp's CI now builds with -j.
+    system "make", "release", "FC=gfortran"
     bin.install "ferp"
 
     # Install documentation
