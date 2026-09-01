@@ -1,8 +1,8 @@
 class Facsimile < Formula
   desc "Terminal text editor written in Fortran with VSCode-style keybindings"
   homepage "https://github.com/FortranGoingOnForty/facsimile"
-  url "https://github.com/FortranGoingOnForty/facsimile/archive/refs/tags/v0.33.0.tar.gz"
-  sha256 "9914694095c0264ed8c5df712e45c3494302f96c54c59ff0141e00c37df9fed3"
+  url "https://github.com/FortranGoingOnForty/facsimile/archive/refs/tags/v0.34.0.tar.gz"
+  sha256 "867bdfc575bddba94d1d9930aa36d0645bf93be978ab433e8578d4fce91e39ba"
   license "MIT"
   head "https://github.com/FortranGoingOnForty/facsimile.git", branch: "trunk"
 
@@ -25,7 +25,7 @@ class Facsimile < Formula
   end
 
   test do
-    # Test that fac can run (basic version check or help)
-    system "#{bin}/fac", "--help"
+    assert_match "fac version #{version}", shell_output("#{bin}/fac --version 2>&1")
+    assert_match "libgfortran", shell_output("otool -L #{bin}/fac") if OS.mac?
   end
 end
