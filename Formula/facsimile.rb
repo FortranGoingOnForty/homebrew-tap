@@ -9,8 +9,10 @@ class Facsimile < Formula
   depends_on "gcc" # for gfortran
 
   def install
-    # Build using make
-    system "make"
+    # Pin the compiler to the GCC dependency. On Apple silicon, allowing Make
+    # to discover another Fortran compiler can produce a binary that aborts on
+    # deferred-length character assignment in the command palette.
+    system "make", "FC=#{formula_opt_bin("gcc")}/gfortran"
 
     # Install binary
     bin.install "fac"
@@ -24,6 +26,6 @@ class Facsimile < Formula
 
   test do
     # Test that fac can run (basic version check or help)
-    system "#{bin}/fac", "--help" rescue true
+    system "#{bin}/fac", "--help"
   end
 end
