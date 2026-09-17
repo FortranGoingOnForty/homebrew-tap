@@ -12,6 +12,7 @@ brew tap FortranGoingOnForty/tap
 
 | Formula | Description | Install |
 |---------|-------------|---------|
+| **armfortas** | Bespoke Fortran compiler for ARM64 and x86_64 | `brew install armfortas` |
 | **facsimile** | Terminal text editor with VSCode-style keybindings | `brew install facsimile` |
 | **ferp** | GNU grep clone written in Fortran | `brew install ferp` |
 | **fit** | Terminal-based merge conflict resolver with three-pane TUI | `brew install fit` |
@@ -37,6 +38,7 @@ brew tap FortranGoingOnForty/tap
 brew install fortress
 brew install facsimile
 brew install fortsh
+brew install armfortas
 
 # Or install a cask
 brew install --cask sniffly
@@ -47,6 +49,9 @@ brew install --cask sniffly
 Most formulas require:
 - GCC (for gfortran)
 - Some formulas have additional dependencies (fzf, pcre2, etc.) which Homebrew will install automatically
+
+ARMFORTAS 0.1.x is a compiler preview for Apple Silicon macOS. It builds from
+source with Rust and does not support Intel Macs.
 
 ## Links
 
